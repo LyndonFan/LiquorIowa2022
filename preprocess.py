@@ -35,7 +35,7 @@ star_dfs = {
 
 
 def rename_column(col_name: str) -> str:
-    return re.sub('\(|\)', '', col_name.split('/')[-1].lower().replace(' ', '_'))
+    return re.sub('\(|\)', '', col_name.split('/')[0].lower().replace(' ', '_'))
 
 
 def add_to_dfs(chunk: DataFrame, dfs: List[DataFrame], columns: List[str]) -> None:
